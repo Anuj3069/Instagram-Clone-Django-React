@@ -20,5 +20,5 @@ from django.urls import path, include
 #user is redirected to Instagram_App.api as we are using serializeand restapi
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('instagram/', include('Instagram_App.api.urls')),
+    path('api/', include('Instagram_App.api.urls')),
 ]

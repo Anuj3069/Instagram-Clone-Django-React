@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from Instagram_App.models import InstaUser,  Posts, Comments
+from Instagram_App.models import InstaUser,  Posts, Comments, Saved_post, Likes
 
 #serializer for Posts model
 class PostsSerializer(serializers.ModelSerializer):
@@ -25,4 +25,16 @@ class CommentsSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Comments
+        fields = "__all__"
+
+class LikesSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Likes
+        fields = "__all__"
+
+class Saved_postSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Saved_post
         fields = "__all__"
