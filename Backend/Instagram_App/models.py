@@ -48,7 +48,7 @@ class Likes(models.Model):
     likes_date = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return self.comment_data
+        return self.likes_owner
 
 
 class Saved_post(models.Model):
